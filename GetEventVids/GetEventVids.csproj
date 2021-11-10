@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<DebugType>embedded</DebugType>
+		<Authors>Louis S. Berman</Authors>
+		<Description>A downloder for Channel9 event videos</Description>
+		<Copyright>Copyright 2021 by Louis S. Berman</Copyright>
+		<PackageTags>Channel 9;video;downloader</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<ApplicationIcon>GetEventVids.ico</ApplicationIcon>
+		<SignAssembly>True</SignAssembly>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Views\EmptyHeart.png" />
+		<None Remove="Views\FullHeart.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="GetEventVids.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Views\EmptyHeart.png" />
+		<Resource Include="Views\FullHeart.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CodeHollow.FeedReader" Version="1.2.2" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.37" />
+		<PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+		<PackageReference Include="NodaTime" Version="3.0.9" />
+		<PackageReference Include="SquidEyes.Basics" Version="1.0.9" />
+	</ItemGroup>
+
+</Project>

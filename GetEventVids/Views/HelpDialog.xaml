@@ -1,0 +1,38 @@
+﻿<Window x:Class="GetEventVids.HelpDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Help"
+        WindowStartupLocation="CenterOwner"
+        Width="440"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="Height">
+    <StackPanel>
+        <GroupBox Header="Channel 9 Video Viewer / Downloader"
+                  Margin="8">
+            <TextBlock TextWrapping="Wrap"
+                       Margin="4,16,4,4" TextAlignment="Justify">
+                The 
+                <Span FontWeight="Bold">GetEventVids</Span>
+                application should be should be fairly easy to understand and use, but if you don't 
+                find it to be so, you can find addition insights and instructions in README.md
+
+            <LineBreak />
+
+                <LineBreak />
+                For additional info and/or source code, please visit the GetEventVids project site at
+                <Hyperlink FontWeight="Bold"
+                           Command="{Binding GoToGithubCommand}">GitHub</Hyperlink>.
+                To contact the author, email
+                <Hyperlink FontWeight="Bold"
+                           Command="{Binding SendEmailCommand}">louis_berman@epam.com</Hyperlink>.</TextBlock>
+        </GroupBox>
+        <Button Content="OK"
+                Margin="8,0,8,8"
+                IsCancel="True"
+                Command="{Binding CloseCommand}" />
+    </StackPanel>
+</Window>
